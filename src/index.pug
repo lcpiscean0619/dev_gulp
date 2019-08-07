@@ -1,0 +1,22 @@
+//- page-a.pug
+extends Template/layout.pug
+block scripts
+  script(src='/jquery.js')
+  script(src='/pets.js')
+
+block nav
+  nav
+
+block content
+  h1.logo 這是logo
+    a(href="http://")
+
+    //- 這樣打只會出現在PUG
+    div 上面有注釋
+
+    // 一些内容
+    div 上面有注釋
+    include Template/pet.pug
+    div djdjdjdj
+
+

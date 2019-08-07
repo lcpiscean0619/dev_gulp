@@ -1,0 +1,130 @@
+<!-- 共用模版 -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{% block title %} {% endblock %} | 台灣休閒農業發展協會</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="description" content="">
+  <meta name="keywords" content="台灣休閒農業發展協會">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="bookmark" href="images/favicon.ico" />
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="台灣休閒農業發展協會">
+  <meta itemprop="description" content="">
+  <meta itemprop="image" content="">
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="台灣休閒農業發展協會" />
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:url" content="" />
+  <!-- 主視覺css -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- js核心 -->
+  <!-- <script src="js/vendor.js"></script> -->
+  
+  <script>
+    //-- Google_analytics--
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-', 'auto');
+  ga('send', 'pageview');
+  </script>
+  
+
+</head>
+
+<body>
+  <div class="Site">
+    <header id="gotoheader" class="Site-header">
+      {% block navigation %} {% endblock %}
+    </header>
+
+    <!-- 主內容Start -->
+    <main class="Site-content">
+      {% block content %} {% endblock %}
+    </main>
+    <!-- 主內容End -->
+
+
+    <!-- 置頂 -->
+    <div class="goTop">
+      <a href="#gotoheader">
+        <i class="fas fa-chevron-up"></i>
+        <span>TOP</span>
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="Site-footer">
+      <div class="footer-info">
+        <a id="BOTTOMarea" class="Accessible" title="頁尾網站資訊區，此區塊有全站主要連結，及網站相關資訊" accesskey="B" href="#BOTTOMarea" style="position:absolute;">
+            <span>:::</span>
+        </a>
+        <div class="container">
+          <div class="row">
+            {% include "macros/footer-data.html" %}
+            {% include "macros/footer-links.html" %}
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="container">
+          <div>Copyright © www.TaiwanFarm.org.tw All rights reserved. <a href="#">隱私權政策</a><a href="#">資訊安全政策</a></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- js 載入 -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+  <!-- smartmenus hover-link -->
+  <script src="js/jquery.smartmenus.js"></script>
+  <script src="js/jquery.smartmenus.bootstrap-4.js"></script>
+  <!-- fancybox -->
+  <script src="js/jquery.fancybox.js"></script>
+  <!-- 各分頁引用js -->
+  {% block js %} {% endblock %}
+
+  <script src="js/main.js"></script>
+  <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@id": "https://ezgo.coa.gov.tw/#organization",
+    "@type": "Organization",
+    "name": "台灣休閒農業發展協會",
+    "description": "集結台灣各地休閒農業旅遊之農漁牧場、森林與自然生態、在地節慶文化、鄉村民宿及各鄉鎮農特產品、地方美食田媽媽餐廳等農業體驗活動，專屬台灣休閒農業旅遊資訊入口平台。",
+    "url": "https://ezgo.coa.gov.tw/",
+    "logo": "https://ezgo.coa.gov.tw/Content/EzgoFront/images/logo.png",
+    "email": " agriezgo@gmail.com",
+    "telephone": "(07) 535-3898#8633",
+    "faxNumber": "(07) 535-3858",
+    "address": {"@type": "PostalAddress", "addressLocality": "中正區, 臺北市", "postalCode": "10014", "streetAddress": "南海路 37 號"},
+    "contactPoint": [{"@type": "ContactPoint","telephone": "+886-7-535-3898#8633","contactType": "customer service","availableLanguage": ["Chinese", "English"],"areaServed": ["TW","US","CA","CN","JP"]}]
+    }
+  </script>
+  <script type="application/ld+json">
+      {
+      "@context": "https://schema.org",
+      "@id": "https://ezgo.coa.gov.tw/#webSite",
+      "@type": "WebSite",
+      "name": "台灣休閒農業發展協會",
+      "alternateName": "Agri ezgo, 台灣休閒農業發展協會",
+      "url": "https://ezgo.coa.gov.tw/",
+      "potentialAction": {"@type": "SearchAction","target": "https://ezgo.coa.gov.tw/zh-TW/Front/SearchResult?ByKeyWord={search_term_string}","query-input": "required name=search_term_string"}
+      }
+  </script>
+
+
+</body>
+
+</html>

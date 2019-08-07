@@ -1,0 +1,21 @@
+h1 {
+    color: red;
+}
+
+div {
+    height: 30px;
+    width: 300px;
+    line-height: 3;
+}
+
+a {
+    transition: transform 1s;
+    width: calc(50% - 2em)
+}
+
+$primary-color: blue;
+
+body {
+    color: $primary-color;
+    // filter: blur(5px);
+}

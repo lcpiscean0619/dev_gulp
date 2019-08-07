@@ -1,0 +1,33 @@
+<!-- index.nunjucks -->
+{% extends "layout.html" %}
+<!--TITLE setting-->
+{% block title %}
+首頁
+{% endblock %}
+<!--Nav setting-->
+{% block navigation %}
+{% import 'macros/nav.html' as nav %}
+<!-- Set navitem to active -->
+{{nav.active('index')}}
+{% endblock %}
+{% block content %}
+<div>dkdkdkdkd</div>
+
+
+{% endblock %}
+
+{% block js %}
+<!-- instashow -->
+<script src="js/jquery.instashow.packaged.js" defer></script>
+<!-- parallax scrolling -->
+<script src="js/Parallax.js"></script>
+<script>
+  // https://www.npmjs.com/package/scroll-parallax
+  var p = new Parallax('.parallax', {
+    offsetYBounds: 50,
+    intensity: 35,
+    center: 0.5,
+    safeHeight: 0.15
+  }).init()
+</script>
+{% endblock %}

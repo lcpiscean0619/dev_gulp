@@ -1,0 +1,86 @@
+{% macro active(activePage = 'home') %}
+{% include "macros/topnav.html" %}
+<div class="mainnav">
+  <div class="container">
+    <a id="TOParea" class="Accessible" title="上方選單連結區，此區塊列有本網站的主要連結" accesskey="U" href="#TOParea">
+        <span>:::</span>
+    </a>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand logo" href="index.html">
+        <div class="logo-main">
+          <img src="./images/LOGOall.svg" alt="台灣休閒農業發展協會LOGO">
+          <h1 class="sr-only">台灣休閒農業發展協會</h1>
+        </div>
+        <!-- <div class="logo-img">
+          <img src="./images/LOGO.svg" alt="台灣休閒農業發展協會LOGO">
+        </div>
+        <div class="logo-name">
+          <h1 class="tw">台灣休閒農業發展協會</h1>
+          <div class="en">
+            <span>TAIWAN </span>
+            <span>LEISURE FARMS </span>
+            <span>DEVELOPMENT </span>
+            <span>ASSOCIATION</span>
+          </div>
+        </div> -->
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="news.html">最新消息</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="about.html">關於協會</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="introduce.html">簡介</a></li>
+              <li><a class="dropdown-item" href="#">農業旅遊吉祥物</a></li>
+              <li><a class="dropdown-item" href="#">理監事會</a></li>
+              <li><a class="dropdown-item" href="#">委員會</a></li>
+              <li><a class="dropdown-item" href="#">秘書處</a></li>
+              <li><a class="dropdown-item" href="#">出版品</a></li>
+              <li><a class="dropdown-item" href="timeline.html">休閒農業大事記</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#">產業發展</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">休閒農業法規</a></li>
+              <li><a class="dropdown-item" href="#">輔導團</a></li>
+              <li><a class="dropdown-item" href="#">國際交流</a></li>
+              <li><a class="dropdown-item" href="#">食農教育</a></li>
+              <li><a class="dropdown-item" href="#">產業六級化</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link dropdown-toggle" href="#">市場行銷</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">國際市場</a></li>
+              <li><a class="dropdown-item" href="#">國內市場</a></li>
+            </ul>
+          </li>
+          <li class="nav-item last">
+            <a class="nav-link" href="links.html">相關連結</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link" href="#">入口頁</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link" href="#">Facebook</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link" href="#">網站地圖</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link" href="#">聯絡我們</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+{% endmacro %}
